@@ -55,6 +55,6 @@ Introduce GPS for outdoor navigation.
 Add a mobile app interface for enhanced remote control functionality.
 Optimize power usage for extended operation.
 
-#AutoCad
+# AutoCad
 When the majority of the code is complete for this project, Autocad will be use to design the casing for the robot. The design as of right now is not complete.
 
