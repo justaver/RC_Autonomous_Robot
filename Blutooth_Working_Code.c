@@ -33,7 +33,9 @@ int main(void) {
         } else if (eventType == JS_EVENT_BUTTON) {
             printf("BUTTON %u VALUE %d\n", e.number, e.value);
         }
-        // else it might be something else or init event
+        else{
+            printf("some other input");
+        }
     }
 
     close(fd);
