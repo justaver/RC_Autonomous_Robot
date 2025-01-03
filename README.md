@@ -41,7 +41,7 @@ H-Bridge Motor Driver
 Bluetooth Module (e.g., HC-05)
 Sensors (to be determined)
 # Tools:
-AutoCAD (For design purposes)
+AutoCAD (For design purposes), 
 GPIO libraries for Raspberry Pi
 # Why This Project?
 This project combines elements of robotics, embedded systems, and algorithm design. It is an opportunity to:
