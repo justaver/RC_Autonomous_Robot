@@ -56,5 +56,5 @@ Add a mobile app interface for enhanced remote control functionality.
 Optimize power usage for extended operation.
 
 #AutoCad
-When majority of the code is complete for this project, Autocad will be use to design the casing for the robot. The design as of right now is not complete.![RC_Pic_1]
+When the majority of the code is complete for this project, Autocad will be use to design the casing for the robot. The design as of right now is not complete.
 
