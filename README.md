@@ -49,3 +49,7 @@ Implement object detection using LIDAR or camera modules.
 Introduce GPS for outdoor navigation.
 Add a mobile app interface for enhanced remote control functionality.
 Optimize power usage for extended operation.
+
+#AutoCad
+When majority of the code is complete for this project, Autocad will be use to design the casing for the robot. The design as of right now is not complete.![RC_Pic_1](https://github.com/user-attachments/assets/1d697ca1-f7f7-4460-8834-49ec9523091c)
+
