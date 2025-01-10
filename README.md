@@ -5,7 +5,8 @@
 # (INCOMPLETE BUILD WORK IN PROGRESS)
 # RC/Autonomous Car
 The RC/Autonomous Car is a versatile robotics project designed to function both as a remote-controlled vehicle and as an autonomous navigation system. Built using Raspberry Pi, this project aims to blend manual control via Bluetooth communication with intelligent navigation algorithms for dynamic environments.
-
+# Progress
+20% complete
 # Features
 Remote-Controlled Mode
 Control the car manually using a Bluetooth-enabled device.
