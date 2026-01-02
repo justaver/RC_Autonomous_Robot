@@ -150,11 +150,8 @@ This project exists to:
 
 ---
 
-# Diagram: easy + “looks good” (Mermaid)
-If you want a diagram **right inside GitHub**, Mermaid is perfect. Drop this into a `diagram.md` or directly into README.
-
+# Wiring Diagram:
 ```md
-```mermaid
 flowchart LR
   Pi[Raspberry Pi 3 B+]
 
@@ -198,3 +195,4 @@ flowchart LR
 
   note1[[All grounds tied together]]
   Power --- note1
+
