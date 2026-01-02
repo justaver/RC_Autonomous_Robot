@@ -154,27 +154,17 @@ This project exists to:
 ```md
 flowchart LR
   Pi[Raspberry Pi 3 B+]
-
-  subgraph MotorDriver[SN754410 H-Bridge]
-    ENA[1,2EN (PWM)]
-    IN1[1A]
-    IN2[2A]
-    ENB[3,4EN (PWM)]
-    IN3[3A]
-    IN4[4A]
-  end
-
-  subgraph Motors[DC Motors]
-    L[Left motor pair (parallel)]
-    R[Right motor pair (parallel)]
-  end
-
-  subgraph LiDAR[TF-Luna (UART)]
-    TX[TX -> Pi RX]
-    RX[RX <- Pi TX]
-    VCC[5V]
-    GND[GND]
-  end
+  ENA[1,2EN (PWM)]
+  IN1[1A]
+  IN2[2A]
+  ENB[3,4EN (PWM)]
+  IN3[3A]
+  IN4[4A]
+  L[Left motor pair]
+  R[Right motor pair]
+  TX[TF-Luna TX]
+  RX[TF-Luna RX]
+  Power[(Battery / Power)]
 
   Pi -- GPIO18 --> ENA
   Pi -- GPIO23 --> IN1
@@ -183,16 +173,12 @@ flowchart LR
   Pi -- GPIO25 --> IN3
   Pi -- GPIO26 --> IN4
 
-  MotorDriver --> L
-  MotorDriver --> R
+  ENA --> L
+  ENB --> R
 
-  Pi <-- UART --> LiDAR
+  Pi <-- UART --> TX
+  Pi <-- UART --> RX
 
-  Power[(Battery / Power)]
-  Power --- MotorDriver
   Power --- Pi
-  Power --- LiDAR
-
-  note1[[All grounds tied together]]
-  Power --- note1
-
+  Power --- L
+  Power --- R
