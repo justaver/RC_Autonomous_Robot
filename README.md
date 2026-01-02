@@ -153,32 +153,42 @@ This project exists to:
 # Wiring Diagram:
 ```md
 flowchart LR
-  Pi[Raspberry Pi 3 B+]
-  ENA[1,2EN (PWM)]
-  IN1[1A]
-  IN2[2A]
-  ENB[3,4EN (PWM)]
-  IN3[3A]
-  IN4[4A]
-  L[Left motor pair]
-  R[Right motor pair]
-  TX[TF-Luna TX]
-  RX[TF-Luna RX]
-  Power[(Battery / Power)]
 
-  Pi -- GPIO18 --> ENA
-  Pi -- GPIO23 --> IN1
-  Pi -- GPIO24 --> IN2
-  Pi -- GPIO19 --> ENB
-  Pi -- GPIO25 --> IN3
-  Pi -- GPIO26 --> IN4
+  Pi[Raspberry Pi 3 B+]
+
+  ENA[ENA (GPIO18)]
+  IN1[IN1 (GPIO23)]
+  IN2[IN2 (GPIO24)]
+  ENB[ENB (GPIO19)]
+  IN3[IN3 (GPIO25)]
+  IN4[IN4 (GPIO26)]
+
+  L[Left Motor Pair]
+  R[Right Motor Pair]
+
+  LiTX[TF-Luna TX → Pi RX]
+  LiRX[TF-Luna RX ← Pi TX]
+
+  Power[(Battery / Power)]
+  GND[Common Ground]
+
+  %% Motor driver connections
+  Pi --> ENA
+  Pi --> IN1
+  Pi --> IN2
+  Pi --> ENB
+  Pi --> IN3
+  Pi --> IN4
 
   ENA --> L
   ENB --> R
 
-  Pi <-- UART --> TX
-  Pi <-- UART --> RX
+  %% LiDAR UART
+  Pi <-- UART --> LiTX
+  Pi <-- UART --> LiRX
 
+  %% Power
   Power --- Pi
   Power --- L
   Power --- R
+  Power --- GND
